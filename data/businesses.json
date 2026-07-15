@@ -1,0 +1,524 @@
+[
+  {
+    "id": "11111111-1111-1111-1111-111111111111",
+    "name": "Clima Forte",
+    "slug": "clima-forte",
+    "description": null,
+    "whatsapp": "5585999999999",
+    "instagram": "climafortefortaleza",
+    "email": "contato@climaforte.demo",
+    "city": "Fortaleza",
+    "state": "CE",
+    "address": "Av. Dom Luís, 1200 — Meireles, Fortaleza",
+    "opening_hours": "Seg a Sáb · 8h às 18h",
+    "primary_color": "#0B3A66",
+    "secondary_color": "#1F6FB2",
+    "logo_url": null,
+    "hero_image_url": "/demo/hero-instalacao.png",
+    "status": "demo",
+    "is_demo": true,
+    "published": true,
+    "created_at": "2026-07-15T20:15:03.162Z",
+    "updated_at": "2026-07-15T20:15:03.162Z",
+    "services": [
+      {
+        "id": "s1-1",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "title": "Instalação de ar-condicionado",
+        "description": "Instalação residencial e comercial com acabamento limpo.",
+        "icon": null,
+        "position": 0
+      },
+      {
+        "id": "s1-2",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "title": "Limpeza e higienização",
+        "description": "Limpeza completa para melhorar o ar e o rendimento.",
+        "icon": null,
+        "position": 1
+      },
+      {
+        "id": "s1-3",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "title": "Manutenção preventiva",
+        "description": "Visitas periódicas para evitar paradas e consumo alto.",
+        "icon": null,
+        "position": 2
+      },
+      {
+        "id": "s1-4",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "title": "Manutenção corretiva",
+        "description": "Diagnóstico e reparo quando o equipamento falha.",
+        "icon": null,
+        "position": 3
+      },
+      {
+        "id": "s1-5",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "title": "Recarga de gás",
+        "description": "Recarga com verificação de vazamentos.",
+        "icon": null,
+        "position": 4
+      },
+      {
+        "id": "s1-6",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "title": "Atendimento empresarial",
+        "description": "Contratos e visitas em horários comerciais.",
+        "icon": null,
+        "position": 5
+      }
+    ],
+    "reviews": [
+      {
+        "id": "r1-1",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "customer_name": "Ana Souza",
+        "rating": 5,
+        "review": "[DEMONSTRAÇÃO] Atendimento rápido e serviço bem feito na instalação do split.",
+        "position": 0
+      },
+      {
+        "id": "r1-2",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "customer_name": "Carlos Mendes",
+        "rating": 5,
+        "review": "[DEMONSTRAÇÃO] Limpeza deixa o ar bem melhor. Recomendo.",
+        "position": 1
+      },
+      {
+        "id": "r1-3",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "customer_name": "Juliana Rocha",
+        "rating": 5,
+        "review": "[DEMONSTRAÇÃO] Pontuais e explicaram o orçamento com clareza.",
+        "position": 2
+      }
+    ],
+    "images": [
+      {
+        "id": "i1-1",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "image_url": "/demo/galeria-instalacao.png",
+        "caption": "Instalação de split",
+        "position": 0
+      },
+      {
+        "id": "i1-2",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "image_url": "/demo/galeria-manutencao.png",
+        "caption": "Manutenção preventiva",
+        "position": 1
+      },
+      {
+        "id": "i1-3",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "image_url": "/demo/galeria-limpeza.png",
+        "caption": "Limpeza e higienização",
+        "position": 2
+      },
+      {
+        "id": "i1-4",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "image_url": "/demo/galeria-split.png",
+        "caption": "Ar-condicionado residencial",
+        "position": 3
+      },
+      {
+        "id": "i1-5",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "image_url": "/demo/galeria-comercial.png",
+        "caption": "Atendimento comercial",
+        "position": 4
+      },
+      {
+        "id": "i1-6",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "image_url": "/demo/galeria-tecnico.png",
+        "caption": "Equipe técnica",
+        "position": 5
+      }
+    ],
+    "service_areas": [
+      {
+        "id": "a1-1",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "name": "Fortaleza",
+        "position": 0
+      },
+      {
+        "id": "a1-2",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "name": "Caucaia",
+        "position": 1
+      },
+      {
+        "id": "a1-3",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "name": "Maracanaú",
+        "position": 2
+      },
+      {
+        "id": "a1-4",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "name": "Eusébio",
+        "position": 3
+      },
+      {
+        "id": "a1-5",
+        "business_id": "11111111-1111-1111-1111-111111111111",
+        "name": "Aquiraz",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "id": "22222222-2222-2222-2222-222222222222",
+    "name": "Ar Polar",
+    "slug": "ar-polar",
+    "description": null,
+    "whatsapp": "5585988888888",
+    "instagram": "arpolarce",
+    "email": "contato@arpolar.demo",
+    "city": "Fortaleza",
+    "state": "CE",
+    "address": "Rua dos Técnicos, 220 — Montese (demonstração)",
+    "opening_hours": "Seg a Sex · 8h às 17h30",
+    "primary_color": "#0F4C5C",
+    "secondary_color": "#5C9EAD",
+    "logo_url": null,
+    "hero_image_url": "/demo/hero-instalacao.png",
+    "status": "demo",
+    "is_demo": true,
+    "published": true,
+    "created_at": "2026-07-15T20:15:03.162Z",
+    "updated_at": "2026-07-15T20:15:03.162Z",
+    "services": [
+      {
+        "id": "s2-1",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "title": "Instalação de ar-condicionado",
+        "description": "Instalação com alinhamento e teste de funcionamento.",
+        "icon": null,
+        "position": 0
+      },
+      {
+        "id": "s2-2",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "title": "Limpeza e higienização",
+        "description": "Higienização de filtros, serpentinas e drenos.",
+        "icon": null,
+        "position": 1
+      },
+      {
+        "id": "s2-3",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "title": "Manutenção preventiva",
+        "description": "Plano simples para residências e comércios.",
+        "icon": null,
+        "position": 2
+      },
+      {
+        "id": "s2-4",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "title": "Manutenção corretiva",
+        "description": "Reparo de vazamentos, ruídos e falhas elétricas.",
+        "icon": null,
+        "position": 3
+      },
+      {
+        "id": "s2-5",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "title": "Recarga de gás",
+        "description": "Recarga com medição de pressão.",
+        "icon": null,
+        "position": 4
+      },
+      {
+        "id": "s2-6",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "title": "Atendimento empresarial",
+        "description": "Atendimento em escritórios e lojas.",
+        "icon": null,
+        "position": 5
+      }
+    ],
+    "reviews": [
+      {
+        "id": "r2-1",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "customer_name": "Pedro Lima",
+        "rating": 5,
+        "review": "[DEMONSTRAÇÃO] Equipe organizada e serviço sem sujeira na casa.",
+        "position": 0
+      },
+      {
+        "id": "r2-2",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "customer_name": "Mariana Alves",
+        "rating": 5,
+        "review": "[DEMONSTRAÇÃO] Orçamento claro e prazo cumprido.",
+        "position": 1
+      },
+      {
+        "id": "r2-3",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "customer_name": "Rafael Costa",
+        "rating": 4,
+        "review": "[DEMONSTRAÇÃO] Resolveram um vazamento rápido.",
+        "position": 2
+      }
+    ],
+    "images": [
+      {
+        "id": "i2-1",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "image_url": "/demo/galeria-instalacao.png",
+        "caption": "Instalação de split",
+        "position": 0
+      },
+      {
+        "id": "i2-2",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "image_url": "/demo/galeria-manutencao.png",
+        "caption": "Manutenção preventiva",
+        "position": 1
+      },
+      {
+        "id": "i2-3",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "image_url": "/demo/galeria-limpeza.png",
+        "caption": "Limpeza e higienização",
+        "position": 2
+      },
+      {
+        "id": "i2-4",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "image_url": "/demo/galeria-split.png",
+        "caption": "Ar-condicionado residencial",
+        "position": 3
+      },
+      {
+        "id": "i2-5",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "image_url": "/demo/galeria-comercial.png",
+        "caption": "Atendimento comercial",
+        "position": 4
+      },
+      {
+        "id": "i2-6",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "image_url": "/demo/galeria-tecnico.png",
+        "caption": "Equipe técnica",
+        "position": 5
+      }
+    ],
+    "service_areas": [
+      {
+        "id": "a2-1",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "name": "Fortaleza",
+        "position": 0
+      },
+      {
+        "id": "a2-2",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "name": "Maracanaú",
+        "position": 1
+      },
+      {
+        "id": "a2-3",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "name": "Pacajus",
+        "position": 2
+      },
+      {
+        "id": "a2-4",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "name": "Itaitinga",
+        "position": 3
+      },
+      {
+        "id": "a2-5",
+        "business_id": "22222222-2222-2222-2222-222222222222",
+        "name": "Eusébio",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "id": "33333333-3333-3333-3333-333333333333",
+    "name": "Climatiza Ceará",
+    "slug": "climatiza-ceara",
+    "description": null,
+    "whatsapp": "5585977777777",
+    "instagram": "climatizaceara",
+    "email": "contato@climatizaceara.demo",
+    "city": "Caucaia",
+    "state": "CE",
+    "address": "Av. Central, 450 — Centro (demonstração)",
+    "opening_hours": "Seg a Sáb · 7h30 às 18h",
+    "primary_color": "#1B4332",
+    "secondary_color": "#40916C",
+    "logo_url": null,
+    "hero_image_url": "/demo/hero-instalacao.png",
+    "status": "negociacao",
+    "is_demo": true,
+    "published": true,
+    "created_at": "2026-07-15T20:15:03.162Z",
+    "updated_at": "2026-07-15T20:15:03.162Z",
+    "services": [
+      {
+        "id": "s3-1",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "title": "Instalação de ar-condicionado",
+        "description": "Instalação residencial e comercial na região.",
+        "icon": null,
+        "position": 0
+      },
+      {
+        "id": "s3-2",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "title": "Limpeza e higienização",
+        "description": "Serviço completo para splits e cassete.",
+        "icon": null,
+        "position": 1
+      },
+      {
+        "id": "s3-3",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "title": "Manutenção preventiva",
+        "description": "Manutenção planejada para reduzir imprevistos.",
+        "icon": null,
+        "position": 2
+      },
+      {
+        "id": "s3-4",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "title": "Manutenção corretiva",
+        "description": "Conserto com diagnóstico transparente.",
+        "icon": null,
+        "position": 3
+      },
+      {
+        "id": "s3-5",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "title": "Recarga de gás",
+        "description": "Recarga com teste de estanqueidade.",
+        "icon": null,
+        "position": 4
+      },
+      {
+        "id": "s3-6",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "title": "Atendimento empresarial",
+        "description": "Contratos para clínicas, lojas e escritórios.",
+        "icon": null,
+        "position": 5
+      }
+    ],
+    "reviews": [
+      {
+        "id": "r3-1",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "customer_name": "Fernanda Dias",
+        "rating": 5,
+        "review": "[DEMONSTRAÇÃO] Fizeram a manutenção do escritório no horário combinado.",
+        "position": 0
+      },
+      {
+        "id": "r3-2",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "customer_name": "Bruno Nogueira",
+        "rating": 5,
+        "review": "[DEMONSTRAÇÃO] Bom custo-benefício e atendimento educado.",
+        "position": 1
+      },
+      {
+        "id": "r3-3",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "customer_name": "Camila Ferreira",
+        "rating": 4,
+        "review": "[DEMONSTRAÇÃO] Instalação correta e explicação clara do uso.",
+        "position": 2
+      }
+    ],
+    "images": [
+      {
+        "id": "i3-1",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "image_url": "/demo/galeria-instalacao.png",
+        "caption": "Instalação de split",
+        "position": 0
+      },
+      {
+        "id": "i3-2",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "image_url": "/demo/galeria-manutencao.png",
+        "caption": "Manutenção preventiva",
+        "position": 1
+      },
+      {
+        "id": "i3-3",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "image_url": "/demo/galeria-limpeza.png",
+        "caption": "Limpeza e higienização",
+        "position": 2
+      },
+      {
+        "id": "i3-4",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "image_url": "/demo/galeria-split.png",
+        "caption": "Ar-condicionado residencial",
+        "position": 3
+      },
+      {
+        "id": "i3-5",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "image_url": "/demo/galeria-comercial.png",
+        "caption": "Atendimento comercial",
+        "position": 4
+      },
+      {
+        "id": "i3-6",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "image_url": "/demo/galeria-tecnico.png",
+        "caption": "Equipe técnica",
+        "position": 5
+      }
+    ],
+    "service_areas": [
+      {
+        "id": "a3-1",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "name": "Caucaia",
+        "position": 0
+      },
+      {
+        "id": "a3-2",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "name": "Fortaleza",
+        "position": 1
+      },
+      {
+        "id": "a3-3",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "name": "São Gonçalo do Amarante",
+        "position": 2
+      },
+      {
+        "id": "a3-4",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "name": "Maracanaú",
+        "position": 3
+      },
+      {
+        "id": "a3-5",
+        "business_id": "33333333-3333-3333-3333-333333333333",
+        "name": "Paracuru",
+        "position": 4
+      }
+    ]
+  }
+]

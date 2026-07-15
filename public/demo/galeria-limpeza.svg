@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#EEF2F6"/>
+  <rect x="120" y="70" width="360" height="260" rx="10" fill="#fff" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M180 150c40-30 200-30 240 0v120c-40 30-200 30-240 0V150z" fill="#E0F2FE" stroke="#0B3A66" stroke-width="3"/>
+  <path d="M220 200h160M220 230h120" stroke="#1F6FB2" stroke-width="5" stroke-linecap="round"/>
+  <text x="300" y="420" text-anchor="middle" fill="#475569" font-family="Arial,sans-serif" font-size="18" font-weight="600">Limpeza e higienização</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#EEF2F6"/>
+  <rect x="80" y="60" width="440" height="280" rx="10" fill="#fff" stroke="#CBD5E1" stroke-width="2"/>
+  <rect x="200" y="100" width="200" height="120" rx="6" fill="#0B3A66"/>
+  <rect x="220" y="120" width="160" height="60" rx="4" fill="#1F6FB2"/>
+  <path d="M120 380h360" stroke="#94A3B8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="300" cy="320" r="40" fill="#64748B"/>
+  <text x="300" y="420" text-anchor="middle" fill="#475569" font-family="Arial,sans-serif" font-size="18" font-weight="600">Instalação</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#EEF2F6"/>
+  <rect x="80" y="60" width="440" height="300" rx="8" fill="#fff" stroke="#CBD5E1" stroke-width="2"/>
+  <rect x="120" y="100" width="80" height="200" fill="#E2E8F0"/>
+  <rect x="220" y="100" width="80" height="200" fill="#E2E8F0"/>
+  <rect x="320" y="100" width="80" height="200" fill="#E2E8F0"/>
+  <rect x="420" y="100" width="80" height="200" fill="#E2E8F0"/>
+  <rect x="130" y="120" width="60" height="40" rx="3" fill="#0B3A66"/>
+  <rect x="230" y="120" width="60" height="40" rx="3" fill="#0B3A66"/>
+  <rect x="330" y="120" width="60" height="40" rx="3" fill="#0B3A66"/>
+  <rect x="430" y="120" width="60" height="40" rx="3" fill="#0B3A66"/>
+  <text x="300" y="420" text-anchor="middle" fill="#475569" font-family="Arial,sans-serif" font-size="18" font-weight="600">Atendimento comercial</text>
+</svg>

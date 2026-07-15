@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#EEF2F6"/>
+  <rect x="100" y="80" width="400" height="240" rx="10" fill="#fff" stroke="#CBD5E1" stroke-width="2"/>
+  <circle cx="300" cy="180" r="70" stroke="#0B3A66" stroke-width="8" fill="none"/>
+  <path d="M300 110v140M230 180h140" stroke="#0B3A66" stroke-width="6" stroke-linecap="round"/>
+  <rect x="180" y="340" width="240" height="36" rx="6" fill="#0B3A66"/>
+  <text x="300" y="420" text-anchor="middle" fill="#475569" font-family="Arial,sans-serif" font-size="18" font-weight="600">Manutenção</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#E8EEF4"/>
+  <rect x="0" y="420" width="800" height="180" fill="#D5DEE8"/>
+  <rect x="120" y="80" width="320" height="220" rx="8" fill="#fff" stroke="#CBD5E1" stroke-width="3"/>
+  <rect x="140" y="100" width="280" height="120" rx="4" fill="#F1F5F9"/>
+  <path d="M180 160h200M180 185h160M180 210h120" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <rect x="500" y="180" width="180" height="80" rx="6" fill="#0B3A66"/>
+  <rect x="520" y="200" width="140" height="40" rx="4" fill="#1F6FB2"/>
+  <circle cx="590" cy="140" r="36" fill="#0B3A66"/>
+  <path d="M575 140c8-14 30-14 30 0s-22 14-30 0" stroke="#fff" stroke-width="3" fill="none"/>
+  <rect x="560" y="260" width="60" height="160" rx="4" fill="#64748B"/>
+  <rect x="480" y="340" width="220" height="24" rx="4" fill="#94A3B8"/>
+  <text x="400" y="540" text-anchor="middle" fill="#64748B" font-family="Arial,sans-serif" font-size="22" font-weight="600">Instalação de ar-condicionado</text>
+</svg>
