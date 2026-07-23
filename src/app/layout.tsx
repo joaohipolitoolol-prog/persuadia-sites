@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
+import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -9,9 +10,18 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Persuadia Sites",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: "Persuadia Sites",
+    template: "%s",
+  },
   description:
-    "Geração e gerenciamento de páginas profissionais para negócios locais de climatização.",
+    "Sites profissionais para empresas de ar-condicionado — orçamento rápido pelo WhatsApp.",
+  applicationName: "Persuadia Sites",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
