@@ -9,7 +9,7 @@ export const alt = "Clima Forte — ar-condicionado em Fortaleza";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 
-export default function Image() {
+export default async function Image() {
   const business = DEMO_BUSINESSES[0];
   return renderBusinessOgImage({
     name: business.name,
@@ -17,7 +17,8 @@ export default function Image() {
     state: business.state,
     primaryColor: business.primary_color,
     secondaryColor: business.secondary_color,
-    services: business.services.slice(0, 3).map((s) => s.title.split(" ")[0]),
+    services: ["Instalação", "Limpeza", "Manutenção"],
     badge: "Peça orçamento no WhatsApp",
+    heroImagePath: business.hero_image_url,
   });
 }

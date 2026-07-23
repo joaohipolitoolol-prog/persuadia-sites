@@ -9,7 +9,7 @@ export const alt = "Fale conosco — Clima Forte";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 
-export default function Image() {
+export default async function Image() {
   const business = DEMO_BUSINESSES[0];
   return renderBusinessOgImage({
     name: business.name,
@@ -18,6 +18,7 @@ export default function Image() {
     primaryColor: business.primary_color,
     secondaryColor: business.secondary_color,
     services: ["WhatsApp", "Orçamento", "Contato"],
-    badge: "Fale conosco",
+    badge: "Fale conosco agora",
+    heroImagePath: business.hero_image_url,
   });
 }

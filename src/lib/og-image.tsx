@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { ImageResponse } from "next/og";
 
 export const OG_SIZE = { width: 1200, height: 630 };
@@ -11,6 +13,7 @@ type OgBusiness = {
   secondaryColor: string;
   services?: string[];
   badge?: string;
+  heroImagePath?: string | null;
 };
 
 function hexToRgb(hex: string) {
@@ -35,11 +38,26 @@ function rgba(hex: string, a: number) {
   return `rgba(${r},${g},${b},${a})`;
 }
 
-export function renderBusinessOgImage(business: OgBusiness) {
+async function loadLocalImage(relativePath: string) {
+  const clean = relativePath.replace(/^\//, "");
+  const filePath = path.join(process.cwd(), "public", clean);
+  try {
+    return await readFile(filePath);
+  } catch {
+    return null;
+  }
+}
+
+export async function renderBusinessOgImage(business: OgBusiness) {
   const primary = business.primaryColor || "#0B3A66";
   const secondary = business.secondaryColor || "#1F6FB2";
   const services = (business.services ?? []).slice(0, 3);
   const badge = business.badge ?? "Orçamento no WhatsApp";
+  const heroPath = business.heroImagePath || "/demo/hero-instalacao.png";
+  const heroBytes = await loadLocalImage(heroPath);
+  const heroSrc = heroBytes
+    ? `data:image/png;base64,${heroBytes.toString("base64")}`
+    : null;
 
   return new ImageResponse(
     (
@@ -52,118 +70,46 @@ export function renderBusinessOgImage(business: OgBusiness) {
           overflow: "hidden",
           fontFamily:
             "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
-          background: `linear-gradient(135deg, ${primary} 0%, ${secondary} 55%, #061525 100%)`,
+          background: primary,
           color: "white",
         }}
       >
-        {/* Atmosphere */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            background: `radial-gradient(ellipse at 18% 20%, ${rgba("#ffffff", 0.18)} 0%, transparent 42%), radial-gradient(ellipse at 88% 78%, ${rgba("#7dd3fc", 0.22)} 0%, transparent 45%)`,
-          }}
-        />
-
-        {/* Soft grid */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            opacity: 0.12,
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-
-        {/* Decorative AC silhouette block */}
-        <div
-          style={{
-            position: "absolute",
-            right: -40,
-            top: 70,
-            width: 420,
-            height: 420,
-            borderRadius: 48,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            padding: 36,
-            background: rgba("#ffffff", 0.1),
-            border: `1px solid ${rgba("#ffffff", 0.22)}`,
-            transform: "rotate(8deg)",
-          }}
-        >
-          <div
+        {/* Full-bleed photo */}
+        {heroSrc ? (
+          // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+          <img
+            src={heroSrc}
+            width={1200}
+            height={630}
             style={{
-              display: "flex",
-              height: 18,
-              borderRadius: 999,
-              background: rgba("#ffffff", 0.35),
-              width: "70%",
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
             }}
           />
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            {[0, 1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                style={{
-                  display: "flex",
-                  height: 10,
-                  borderRadius: 999,
-                  background: rgba("#ffffff", 0.18 + i * 0.04),
-                  width: `${88 - i * 8}%`,
-                }}
-              />
-            ))}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-            }}
-          >
-            <div
-              style={{
-                width: 54,
-                height: 54,
-                borderRadius: 999,
-                background: rgba("#7dd3fc", 0.55),
-                display: "flex",
-              }}
-            />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 8,
-              }}
-            >
-              <div
-                style={{
-                  width: 140,
-                  height: 12,
-                  borderRadius: 999,
-                  background: rgba("#ffffff", 0.35),
-                  display: "flex",
-                }}
-              />
-              <div
-                style={{
-                  width: 90,
-                  height: 10,
-                  borderRadius: 999,
-                  background: rgba("#ffffff", 0.22),
-                  display: "flex",
-                }}
-              />
-            </div>
-          </div>
-        </div>
+        ) : null}
+
+        {/* Brand gradient wash */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            background: `linear-gradient(105deg, ${rgba(primary, 0.94)} 0%, ${rgba(primary, 0.82)} 42%, ${rgba(secondary, 0.45)} 72%, ${rgba("#061525", 0.25)} 100%)`,
+          }}
+        />
+
+        {/* Cool light bloom */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            background: `radial-gradient(ellipse at 85% 20%, ${rgba("#7dd3fc", 0.28)} 0%, transparent 40%), radial-gradient(ellipse at 10% 90%, ${rgba("#ffffff", 0.12)} 0%, transparent 35%)`,
+          }}
+        />
 
         {/* Content */}
         <div
@@ -174,85 +120,153 @@ export function renderBusinessOgImage(business: OgBusiness) {
             justifyContent: "space-between",
             width: "100%",
             height: "100%",
-            padding: "54px 64px",
+            padding: "48px 56px",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: 52,
-                height: 52,
-                borderRadius: 16,
-                background: rgba("#ffffff", 0.16),
-                border: `1px solid ${rgba("#ffffff", 0.28)}`,
-                fontSize: 22,
-                fontWeight: 700,
-                letterSpacing: -0.5,
-              }}
-            >
-              {business.name.slice(0, 1).toUpperCase()}
-            </div>
-            <div
-              style={{
-                display: "flex",
-                padding: "10px 18px",
-                borderRadius: 999,
-                background: rgba("#ffffff", 0.14),
-                border: `1px solid ${rgba("#ffffff", 0.22)}`,
-                fontSize: 22,
-                fontWeight: 600,
-                letterSpacing: 0.2,
-              }}
-            >
-              {badge}
-            </div>
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: 18, maxWidth: 760 }}>
-            <div
-              style={{
-                display: "flex",
-                fontSize: 72,
-                fontWeight: 700,
-                lineHeight: 1.05,
-                letterSpacing: -2.2,
-              }}
-            >
-              {business.name}
-            </div>
-            <div
-              style={{
-                display: "flex",
-                fontSize: 34,
-                fontWeight: 500,
-                opacity: 0.92,
-                lineHeight: 1.25,
-              }}
-            >
-              Ar-condicionado em {business.city} — {business.state}
-            </div>
-            <div
-              style={{
-                display: "flex",
-                fontSize: 26,
-                opacity: 0.82,
-                lineHeight: 1.35,
-                maxWidth: 680,
-              }}
-            >
-              Instalação · Limpeza · Manutenção · Atendimento rápido
-            </div>
-          </div>
-
+          {/* Top row */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              gap: 24,
+              width: "100%",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 58,
+                  height: 58,
+                  borderRadius: 18,
+                  background: rgba("#ffffff", 0.16),
+                  border: `1px solid ${rgba("#ffffff", 0.3)}`,
+                  fontSize: 26,
+                  fontWeight: 700,
+                }}
+              >
+                {business.name.slice(0, 1).toUpperCase()}
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 4,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    fontSize: 20,
+                    fontWeight: 600,
+                    opacity: 0.85,
+                    letterSpacing: 0.3,
+                  }}
+                >
+                  {business.city} · {business.state}
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    fontSize: 18,
+                    opacity: 0.7,
+                  }}
+                >
+                  Instalação · Limpeza · Manutenção
+                </div>
+              </div>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                padding: "12px 18px",
+                borderRadius: 999,
+                background: rgba("#061525", 0.45),
+                border: `1px solid ${rgba("#ffffff", 0.22)}`,
+                fontSize: 20,
+                fontWeight: 600,
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  color: "#FBBF24",
+                  fontWeight: 800,
+                }}
+              >
+                5,0
+              </div>
+              <div style={{ display: "flex" }}>avaliacao dos clientes</div>
+            </div>
+          </div>
+
+          {/* Hero copy */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 20,
+              maxWidth: 780,
+              marginTop: 18,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignSelf: "flex-start",
+                padding: "10px 16px",
+                borderRadius: 999,
+                background: rgba("#25D366", 0.22),
+                border: "1px solid rgba(37, 211, 102, 0.55)",
+                color: "#D1FAE5",
+                fontSize: 20,
+                fontWeight: 700,
+                letterSpacing: 0.2,
+              }}
+            >
+              {badge}
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                fontSize: 76,
+                fontWeight: 800,
+                lineHeight: 1.02,
+                letterSpacing: -2.4,
+                textShadow: "0 10px 40px rgba(0,0,0,0.35)",
+              }}
+            >
+              {business.name}
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                fontSize: 32,
+                fontWeight: 500,
+                lineHeight: 1.3,
+                opacity: 0.95,
+                maxWidth: 700,
+              }}
+            >
+              Ar-condicionado com atendimento rápido em {business.city}
+            </div>
+          </div>
+
+          {/* Bottom CTA row */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+              gap: 20,
             }}
           >
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -266,8 +280,8 @@ export function renderBusinessOgImage(business: OgBusiness) {
                     display: "flex",
                     padding: "12px 18px",
                     borderRadius: 999,
-                    background: rgba("#061525", 0.35),
-                    border: `1px solid ${rgba("#ffffff", 0.22)}`,
+                    background: rgba("#ffffff", 0.12),
+                    border: `1px solid ${rgba("#ffffff", 0.24)}`,
                     fontSize: 22,
                     fontWeight: 600,
                   }}
@@ -276,24 +290,27 @@ export function renderBusinessOgImage(business: OgBusiness) {
                 </div>
               ))}
             </div>
+
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: 10,
-                fontSize: 20,
-                opacity: 0.72,
-                fontWeight: 500,
+                gap: 12,
+                padding: "16px 22px",
+                borderRadius: 18,
+                background: "#25D366",
+                color: "#052e16",
+                fontSize: 24,
+                fontWeight: 800,
+                boxShadow: "0 12px 30px rgba(37, 211, 102, 0.35)",
               }}
             >
-              Site profissional · Persuadia
+              Chamar no WhatsApp
             </div>
           </div>
         </div>
       </div>
     ),
-    {
-      ...OG_SIZE,
-    }
+    { ...OG_SIZE }
   );
 }

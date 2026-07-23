@@ -25,10 +25,8 @@ export default async function Image({ params }: Props) {
     state: business.state,
     primaryColor: business.primary_color,
     secondaryColor: business.secondary_color,
-    services: business.services.slice(0, 3).map((s) => {
-      const word = s.title.split(" ")[0];
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    }),
+    services: ["Instalação", "Limpeza", "Manutenção"],
     badge: "Peça orçamento no WhatsApp",
+    heroImagePath: business.hero_image_url,
   });
 }
