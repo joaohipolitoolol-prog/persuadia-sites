@@ -10,7 +10,10 @@ export function getSiteUrl() {
     process.env.VERCEL_URL;
 
   if (fromEnv) {
-    const host = fromEnv.replace(/^https?:\/\//, "");
+    const host = fromEnv
+      .trim()
+      .replace(/^https?:\/\//, "")
+      .replace(/\/$/, "");
     return `https://${host}`;
   }
 
