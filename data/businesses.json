@@ -520,5 +520,179 @@
         "position": 4
       }
     ]
+  },
+  {
+    "id": "44444444-4444-4444-4444-444444444444",
+    "name": "MISA TEC",
+    "slug": "misa-tec",
+    "description": "Refrigeração e ar-condicionado de veículos pesados: caminhões, ônibus e máquinas. Diagnóstico, manutenção preventiva e corretiva com atendimento técnico especializado.",
+    "whatsapp": "5585987654321",
+    "instagram": "misatec_",
+    "email": "contato@misatec.demo",
+    "city": "Fortaleza",
+    "state": "CE",
+    "address": "Fortaleza — CE (demonstração)",
+    "opening_hours": "Seg a Sex · 8h às 18h · Sáb até 12h",
+    "primary_color": "#E85D04",
+    "secondary_color": "#111111",
+    "logo_url": "/demo/misa-tec-logo.png",
+    "hero_image_url": "/demo/misa-hero.jpg",
+    "status": "demo",
+    "is_demo": true,
+    "published": true,
+    "created_at": "2026-07-24T00:03:04.821Z",
+    "updated_at": "2026-07-24T00:03:04.821Z",
+    "services": [
+      {
+        "id": "s4-1",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "title": "Refrigeração de caminhões",
+        "description": "Manutenção e reparo de unidades de refrigeração para baús e frotas.",
+        "icon": null,
+        "position": 0
+      },
+      {
+        "id": "s4-2",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "title": "Ar-condicionado de ônibus",
+        "description": "Diagnóstico, limpeza e manutenção de climatização em ônibus.",
+        "icon": null,
+        "position": 1
+      },
+      {
+        "id": "s4-3",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "title": "Máquinas e equipamentos",
+        "description": "Atendimento em máquinas pesadas e equipamentos com sistema de refrigeração.",
+        "icon": null,
+        "position": 2
+      },
+      {
+        "id": "s4-4",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "title": "Manutenção preventiva",
+        "description": "Planos para reduzir quebra e tempo parado da frota.",
+        "icon": null,
+        "position": 3
+      },
+      {
+        "id": "s4-5",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "title": "Manutenção corretiva",
+        "description": "Conserto com diagnóstico claro e retorno rápido à operação.",
+        "icon": null,
+        "position": 4
+      },
+      {
+        "id": "s4-6",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "title": "Recarga e verificação de gás",
+        "description": "Recarga com checagem de vazamentos e desempenho do sistema.",
+        "icon": null,
+        "position": 5
+      }
+    ],
+    "reviews": [
+      {
+        "id": "r4-1",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "customer_name": "Transportadora Norte Sul",
+        "rating": 5,
+        "review": "Resolveram a unidade do caminhão rápido e com transparência no orçamento.",
+        "position": 0
+      },
+      {
+        "id": "r4-2",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "customer_name": "Roberto Lima",
+        "rating": 5,
+        "review": "Atendimento técnico sério. O ônibus voltou a climatizar no mesmo dia.",
+        "position": 1
+      },
+      {
+        "id": "r4-3",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "customer_name": "Frota Ceará Log",
+        "rating": 5,
+        "review": "Manutenção preventiva bem feita. Menos parada e mais confiança na operação.",
+        "position": 2
+      }
+    ],
+    "images": [
+      {
+        "id": "i4-1",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "image_url": "/demo/misa-galeria-1.jpg",
+        "caption": "Frota e veículos pesados",
+        "position": 0
+      },
+      {
+        "id": "i4-2",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "image_url": "/demo/misa-galeria-2.jpg",
+        "caption": "Operação logística",
+        "position": 1
+      },
+      {
+        "id": "i4-3",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "image_url": "/demo/misa-galeria-3.jpg",
+        "caption": "Caminhões em operação",
+        "position": 2
+      },
+      {
+        "id": "i4-4",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "image_url": "/demo/misa-galeria-4.jpg",
+        "caption": "Ambiente técnico",
+        "position": 3
+      },
+      {
+        "id": "i4-5",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "image_url": "/demo/misa-galeria-5.jpg",
+        "caption": "Oficina e manutenção",
+        "position": 4
+      },
+      {
+        "id": "i4-6",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "image_url": "/demo/misa-galeria-6.jpg",
+        "caption": "Veículos em atendimento",
+        "position": 5
+      }
+    ],
+    "service_areas": [
+      {
+        "id": "a4-1",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "name": "Fortaleza",
+        "position": 0
+      },
+      {
+        "id": "a4-2",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "name": "Caucaia",
+        "position": 1
+      },
+      {
+        "id": "a4-3",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "name": "Maracanaú",
+        "position": 2
+      },
+      {
+        "id": "a4-4",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "name": "Eusébio",
+        "position": 3
+      },
+      {
+        "id": "a4-5",
+        "business_id": "44444444-4444-4444-4444-444444444444",
+        "name": "Aquiraz",
+        "position": 4
+      }
+    ]
   }
 ]

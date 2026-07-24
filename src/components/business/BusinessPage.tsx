@@ -1,6 +1,12 @@
 import type { CSSProperties } from "react";
 import type { BusinessFull } from "@/lib/types";
 import {
+  getAboutHeadline,
+  getBenefits,
+  getHeroHeadline,
+  getHeroSupport,
+} from "@/lib/business-copy";
+import {
   buildWhatsAppUrl,
   defaultWhatsAppMessage,
 } from "@/lib/utils";
@@ -25,6 +31,7 @@ import { ServicesSection } from "./ServicesSection";
 
 type BusinessPageProps = {
   business: BusinessFull;
+  homeHref?: string;
 };
 
 function normalizeBusiness(business: BusinessFull): BusinessFull {
@@ -46,7 +53,10 @@ function normalizeBusiness(business: BusinessFull): BusinessFull {
   };
 }
 
-export function BusinessPage({ business: raw }: BusinessPageProps) {
+export function BusinessPage({
+  business: raw,
+  homeHref = "/",
+}: BusinessPageProps) {
   const business = normalizeBusiness(raw);
   const whatsappUrl = buildWhatsAppUrl(
     business.whatsapp,
@@ -71,17 +81,22 @@ export function BusinessPage({ business: raw }: BusinessPageProps) {
         whatsappUrl={whatsappUrl}
         primaryColor={business.primary_color}
         secondaryColor={business.secondary_color}
+        homeHref={homeHref}
       />
       <main>
         <BusinessHero
           name={business.name}
           city={business.city}
-          description={business.description}
+          headline={getHeroHeadline(business)}
+          description={getHeroSupport(business)}
           heroImageUrl={business.hero_image_url}
           whatsappUrl={whatsappUrl}
           primaryColor={business.primary_color}
         />
-        <BenefitsSection primaryColor={business.primary_color} />
+        <BenefitsSection
+          primaryColor={business.primary_color}
+          items={getBenefits(business)}
+        />
         <ServicesSection
           services={business.services}
           primaryColor={business.primary_color}
@@ -96,6 +111,7 @@ export function BusinessPage({ business: raw }: BusinessPageProps) {
           name={business.name}
           city={business.city}
           description={business.description}
+          headline={getAboutHeadline(business)}
           primaryColor={business.primary_color}
         />
         <GallerySection

@@ -14,6 +14,8 @@ type OgBusiness = {
   services?: string[];
   badge?: string;
   heroImagePath?: string | null;
+  subtitle?: string;
+  nicheLine?: string;
 };
 
 function hexToRgb(hex: string) {
@@ -53,6 +55,11 @@ export async function renderBusinessOgImage(business: OgBusiness) {
   const secondary = business.secondaryColor || "#1F6FB2";
   const services = (business.services ?? []).slice(0, 3);
   const badge = business.badge ?? "Orcamento no WhatsApp";
+  const nicheLine =
+    business.nicheLine ?? "Instalacao · Limpeza · Manutencao";
+  const subtitle =
+    business.subtitle ??
+    `Ar-condicionado com atendimento rapido em ${business.city}`;
   const heroPath = business.heroImagePath || "/demo/hero-instalacao.png";
   const heroBytes = await loadLocalImage(heroPath);
   const heroSrc = heroBytes
@@ -189,7 +196,7 @@ export async function renderBusinessOgImage(business: OgBusiness) {
                   opacity: 0.8,
                 }}
               >
-                Instalacao · Limpeza · Manutencao
+                {nicheLine}
               </div>
             </div>
           </div>
@@ -234,7 +241,7 @@ export async function renderBusinessOgImage(business: OgBusiness) {
               maxWidth: "560px",
             }}
           >
-            Ar-condicionado com atendimento rapido em {business.city}
+            {subtitle}
           </div>
         </div>
 

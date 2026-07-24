@@ -138,11 +138,30 @@ function replyFor(input: string, ctx: ReplyContext): string {
       id: "install",
       score: scoreIntent(q, [
         /\b(instal|instala|colocar ar|montar ar|split novo)\b/,
+        /\b(caminhao|caminhoes|onibus|bau|frota|maquina|veiculo pesad|refrigeracao)\b/,
       ]),
-      answer: () =>
-        `Sim — fazemos instalação de ar-condicionado residencial e comercial em ${
+      answer: () => {
+        if (
+          includesAny(q, [
+            "caminhao",
+            "caminhoes",
+            "onibus",
+            "bau",
+            "frota",
+            "maquina",
+            "veiculo",
+            "refrigeracao",
+          ]) ||
+          /misa|pesad/.test(normalize(ctx.businessName))
+        ) {
+          return `Sim — a ${ctx.businessName} atende refrigeração e ar-condicionado de veículos pesados (caminhões, ônibus e máquinas) em ${
+            mentionedArea || ctx.city
+          }. Para agendar diagnóstico, o WhatsApp é o caminho mais rápido.`;
+        }
+        return `Sim — fazemos instalação de ar-condicionado residencial e comercial em ${
           mentionedArea || ctx.city
-        } e região. Informe a marca/BTUs se souber; para agendar, o caminho mais rápido é o WhatsApp.`,
+        } e região. Informe a marca/BTUs se souber; para agendar, o caminho mais rápido é o WhatsApp.`;
+      },
     },
     {
       id: "cleaning",

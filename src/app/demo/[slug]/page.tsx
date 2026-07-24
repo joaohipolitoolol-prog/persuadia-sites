@@ -27,5 +27,5 @@ export default async function DemoPage({ params }: DemoPageProps) {
 
   if (!business) notFound();
 
-  return <BusinessPage business={business} />;
+  return <BusinessPage business={business} homeHref={`/demo/${slug}`} />;
 }

@@ -5,6 +5,7 @@ import { getDefaultHeroImage, normalizeImageUrl } from "@/lib/stock-images";
 type BusinessHeroProps = {
   name: string;
   city: string;
+  headline?: string;
   description?: string | null;
   heroImageUrl: string | null;
   whatsappUrl: string;
@@ -14,11 +15,15 @@ type BusinessHeroProps = {
 export function BusinessHero({
   name,
   city,
+  headline,
   description,
   heroImageUrl,
   whatsappUrl,
   primaryColor,
 }: BusinessHeroProps) {
+  const title =
+    headline?.trim() ||
+    `Instalação e manutenção de ar-condicionado em ${city}`;
   const support =
     description?.trim() ||
     "Atendimento para residências, empresas e comércios. Solicite seu orçamento diretamente pelo WhatsApp.";
@@ -36,7 +41,7 @@ export function BusinessHero({
             {name}
           </p>
           <h1 className="max-w-xl text-3xl leading-tight font-bold text-slate-900 sm:text-4xl lg:text-[2.75rem]">
-            Instalação e manutenção de ar-condicionado em {city}
+            {title}
           </h1>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg">
             {support}
@@ -59,11 +64,11 @@ export function BusinessHero({
         <div className="relative animate-fade-up-delayed order-1 aspect-[16/10] overflow-hidden rounded-2xl bg-slate-200 shadow-md ring-1 ring-black/5 lg:order-2 lg:aspect-[5/4]">
           <SafeImage
             src={imageSrc}
-            alt={`Serviço de ar-condicionado — ${name}`}
+            alt={`Serviço — ${name}`}
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
             primaryColor={primaryColor}
-            fallbackLabel="Instalação de ar-condicionado"
+            fallbackLabel={name}
           />
         </div>
       </div>
